@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 import configFile from "../config.json";
 
 const http = axios.create({
@@ -13,7 +14,7 @@ http.interceptors.response.use(
             error.response.status >= 400 &&
             error.response.status < 500;
         if (!expectedError) {
-            console.error("Something got broken. Try again later");
+            toast.error("Something got broken. Try again later");
         }
         return Promise.reject(error);
     }

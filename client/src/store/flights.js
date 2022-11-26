@@ -124,6 +124,8 @@ export const getFactTimeWork = (period) => (state) => {
     }, 0);
 };
 
+export const getFlightsError = () => (state) => state.flights.error;
+
 export const loadFlights = () => async (dispatch) => {
     try {
         dispatch(flightsRequested());
