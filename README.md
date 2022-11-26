@@ -1,11 +1,11 @@
-# Install server dependecies
+## Install server dependecies
 
 npm install
 
-# Install client dependencies
+## Install client dependencies
 
 npm run client-install
 
-# Run the Application
+## Run the Application
 
 npm run dev
